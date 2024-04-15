@@ -8,7 +8,12 @@ class PlikGłówny
         //To jest baza naszego projektu
         Tablice tab1 = new Tablice();
 
-        tab1.Wyswietl();
-    }//ja mu gaz a on mi zgasl made by karolina P.
+        int[] tab = tab1.Tworzenie_tablicy();
+
+        for (int i = 0; i < tab.Length; i++)
+        {
+            Console.WriteLine(tab[i]);
+        }
+    }
     
 }
