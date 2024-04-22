@@ -12,6 +12,8 @@ class PlikGłówny
 
         tab1.Sortowanie_babelkowe(tab);
         tab1.Wyswietl(tab);
+
+        tab1.Przeszukaj(tab);
         
     }
     

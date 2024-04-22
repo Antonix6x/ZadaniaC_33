@@ -1,6 +1,7 @@
 ﻿using System;
 using System.Collections.Generic;
 using System.Linq;
+using System.Reflection.Metadata.Ecma335;
 using System.Text;
 using System.Threading.Tasks;
 
@@ -10,6 +11,7 @@ namespace Testpowtórzeniowy
     {
         public void Wyswietl(int[] tab)
         {
+
             for (int i = 0; i < tab.Length; i++)
             {
                 Console.WriteLine(tab[i] + ", ");
@@ -49,7 +51,29 @@ namespace Testpowtórzeniowy
                 k--;
             }
                 
-            
+        
+        } 
+        public void Przeszukaj(int[] tab)
+        {
+            Console.WriteLine("Jakie liczby Pan szuka?");
+            int liczba = int.Parse(Console.ReadLine());
+            bool szukana = false;
+            int ile_powtorzen = 0;
+            for (int i = 0;i < tab.Length;i++)
+            {
+                if (tab[i]==liczba)
+                {
+                    szukana = true;
+                    ile_powtorzen++;
+                }
+                
+            }
+            if(szukana == true)
+            {
+                Console.WriteLine($"Liczby jest w tablicy, występuje {ile_powtorzen} razy.");
+            }
+            else { Console.WriteLine("Nie występuje"); }
         }
+       
     }
 }
