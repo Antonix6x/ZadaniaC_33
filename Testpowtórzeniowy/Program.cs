@@ -10,10 +10,8 @@ class PlikGłówny
 
         int[] tab = tab1.Tworzenie_tablicy();
 
-        for (int i = 0; i < tab.Length; i++)
-        {
-            Console.WriteLine(tab[i]);
-        }
+        tab1.Wyswietl(tab);
     }
+    
     
 }
