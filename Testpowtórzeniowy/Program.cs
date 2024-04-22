@@ -10,7 +10,9 @@ class PlikGłówny
 
         int[] tab = tab1.Tworzenie_tablicy();
 
+        tab1.Sortowanie_babelkowe(tab);
         tab1.Wyswietl(tab);
+        
     }
     
     

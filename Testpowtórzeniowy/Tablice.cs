@@ -8,18 +8,18 @@ namespace Testpowtórzeniowy
 {
     public class Tablice
     {
-        public void Wyswietl(int[] tab) 
+        public void Wyswietl(int[] tab)
         {
             for (int i = 0; i < tab.Length; i++)
             {
-                Console.WriteLine(tab[i]+ ", ");
+                Console.WriteLine(tab[i] + ", ");
             }
         }
         public int[] Tworzenie_tablicy()
         {
             //pobierammy długość tablicy od użytkownika
             Console.WriteLine("Ile znaków ma mieć tablica?");
-            int d=int.Parse(Console.ReadLine());
+            int d = int.Parse(Console.ReadLine());
             //tworsymy pustą tablice
             int[] ints = new int[d];
 
@@ -30,6 +30,26 @@ namespace Testpowtórzeniowy
                 ints[i] = int.Parse(Console.ReadLine());
             }
             return ints;
+        }
+
+        public void Sortowanie_babelkowe(int[] tab)
+        {
+            int k = tab.Length;
+            while (k > 0)
+            {
+                for (int i = 0; i < k-1;i++)
+                {
+                    if (tab[i] > tab[i+1])
+                    {
+                        int nazwa = tab[i];
+                        tab[i] = tab[i+1];
+                        tab[i+1] = nazwa;
+                    }
+                }
+                k--;
+            }
+                
+            
         }
     }
 }
