@@ -8,9 +8,12 @@ namespace Testpowtórzeniowy
 {
     public class Tablice
     {
-        public void Wyswietl() 
+        public void Wyswietl(int[] tab) 
         {
-            Console.WriteLine("to jest plik");
+            for (int i = 0; i < tab.Length; i++)
+            {
+                Console.WriteLine(tab[i]+ ", ");
+            }
         }
         public int[] Tworzenie_tablicy()
         {
